@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-marvel {
+    font-family: 'Bebas Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: 0.06em;
+  }
+  .font-comic {
+    font-family: 'Bangers', cursive, sans-serif;
+    letter-spacing: 0.04em;
+  }
+  .font-kurdish {
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+  }
+
+  .bg-halftone {
+    background-image: radial-gradient(rgba(236, 29, 36, 0.14) 1.5px, transparent 1.5px);
+    background-size: 14px 14px;
+  }
+  .bg-halftone-dots {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1.2px, transparent 1.2px);
+    background-size: 12px 12px;
+  }
+  .bg-halftone-yellow {
+    background-image: radial-gradient(rgba(254, 202, 87, 0.12) 1.5px, transparent 1.5px);
+    background-size: 14px 14px;
+  }
+
+  .comic-shadow {
+    box-shadow: 6px 6px 0px #000000;
+  }
+  .comic-shadow-red {
+    box-shadow: 6px 6px 0px #ec1d24;
+  }
+  .comic-shadow-gold {
+    box-shadow: 6px 6px 0px #f59e0b;
+  }
+  .comic-shadow-sm {
+    box-shadow: 3px 3px 0px #000000;
+  }
+  .comic-skew {
+    transform: skew(-2deg);
+  }
+  .comic-skew-reverse {
+    transform: skew(2deg);
+  }
+}
+
+/* Custom comic shake animation */
+@keyframes comicShake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.animate-comic-shake {
+  animation: comicShake 0.45s ease-in-out;
+}
+
+/* Pulse glow for Infinity Stones */
+@keyframes stoneGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px currentColor) drop-shadow(0 0 25px currentColor);
+  }
+  50% {
+    filter: drop-shadow(0 0 22px currentColor) drop-shadow(0 0 45px currentColor);
+  }
+}
+
+.animate-stone-glow {
+  animation: stoneGlow 2.5s infinite ease-in-out;
+}
+
+/* Comic paper texturizer */
+.comic-paper {
+  background-color: #0d0f14;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(236, 29, 36, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(254, 202, 87, 0.04) 0%, transparent 25%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #ec1d24;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b9151b;
+}

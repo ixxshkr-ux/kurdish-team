@@ -1,0 +1,6 @@
+{
+  "name": "Marvel Universe Codex & Multiverse Arena",
+  "description": "An immersive Marvel experience featuring dynamic comic panels, interactive hero roster, Infinity Gauntlet simulator, Multiverse battle arena, and classic comic cover studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
